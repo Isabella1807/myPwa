@@ -1,0 +1,98 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #666699;
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        margin: 0 auto;
+
+        &.container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .brand-logo {
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+
+            li {
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+        }
+
+        .burger {
+            display: none;
+            transform: rotate(90deg);
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .nav-wrapper {
+            .burger {
+                display: block;
+            }
+
+            .hide-on-med-and-down {
+                display: none;
+            }
+        }
+    }
+}
+
+.sidenav {
+    position: absolute;
+    top: 0;
+    right: -250px;
+    transition: right 0.3s;
+    width: 250px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    z-index: 900;
+    height: 100vh;
+
+    &.open {
+        right: 0;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+}
+
+body:has(.sidenav.open)::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 800;
+    top: 0;
+    left: 0;
+}
