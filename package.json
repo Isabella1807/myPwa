@@ -1,0 +1,23 @@
+{
+  "name": "mypwa",
+  "version": "1.0.0",
+  "main": "sw.js",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server --port=8080 --host=localhost"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isabella1807/myPwa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isabella1807/myPwa/issues"
+  },
+  "homepage": "https://github.com/Isabella1807/myPwa#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

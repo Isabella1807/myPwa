@@ -1,6 +1,6 @@
 //Gemmer ting der ikke ændre sig særlig ofte.
-const staticCache = 'staticCache-v11'
-const dynamicCache = 'dynamicCache-v7'
+const staticCache = 'staticCache-v15'
+const dynamicCache = 'dynamicCache-v10'
 
 
 const assets = [
@@ -64,6 +64,12 @@ self.addEventListener('fetch', event => {
                     return fetchRes
                 })
             });
-        }).catch(() => caches.match('/pages/test.html'))
+        }).catch(() => {
+                //hvis
+                if (event.request.url.indexOf('.html') > -1) {
+                    caches.match('/pages/test.html')
+                }
+            }
+        )
     )
 });
