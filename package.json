@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --port=8080 --host=localhost"
+    "start": "live-server"
   },
   "repository": {
     "type": "git",
